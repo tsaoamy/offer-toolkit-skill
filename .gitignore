@@ -21,11 +21,14 @@ resume-skill/*-resume-*.html
 resume-skill/*.pdf
 
 # === Job Description Skill · personal JD analyses ===
-# Only track template + index inside jd-bank/
-# (Personal JD analyses stay local; add !exceptions if you want to publish a case study)
+# Keep only empty scaffold in git: _index.md (no personal rows) + _jd-template.md
+# All real JD markdown + local index stay local and must NOT be force-added.
 job-description-skill/jd-bank/*.md
 !job-description-skill/jd-bank/_index.md
 !job-description-skill/jd-bank/_jd-template.md
+job-description-skill/jd-bank/_index.local.md
+job-description-skill/jd-bank/_index.md.local
+
 # Generated reports (defensively exclude, keep the template skeleton)
 job-description-skill/*.html
 !job-description-skill/examples/*.html

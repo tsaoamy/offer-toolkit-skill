@@ -2,8 +2,11 @@
 
 每份分析过的 JD 的反查表。**每次新增 / 更新 JD 文件，必须同步更新这里。**
 
-文件命名规则：`<company-slug>-<role-slug>-<YYYYMM>.md`
-例：`tencent-ai-hr-communication-202607.md`
+> 个人 JD 分析（公司 / 岗位 / 候选人）只写在 **`_index.local.md`**，**不要**写进本文件、也不要 push 到公开仓库。  
+> 本文件在仓库里只放空壳结构。
+
+文件命名规则：`<company-slug>-<role-slug>-<YYYYMM>.md`  
+例：`tencent-hr-trainee-202607.md`
 
 ---
 
@@ -23,13 +26,11 @@
 
 ## All JDs（按状态分组）
 
-### 📊 Matched（已算匹配度）
-
-| 文件 | 公司 | 岗位 | Match | ⭐ | 候选人 |
-|---|---|---|---|---|---|
-| [tencent-ai-hr-communication.md](tencent-ai-hr-communication.md) | 腾讯 | AI-HR培训生（沟通方向） | 68–78% | 4/5 | 曹健僖 |
-
 ### 🔍 Decoded（已解码，未决定）
+
+> 暂无（本地分析后在此登记）
+
+### 📊 Matched（已算匹配度）
 
 > 暂无
 
@@ -57,21 +58,19 @@
 
 ## 按公司聚合
 
-### 腾讯
-- [tencent-ai-hr-communication.md](tencent-ai-hr-communication.md) — AI-HR培训生（沟通方向）/ HR STAR
+> 暂无
 
 ---
 
 ## 按岗位类型聚合
 
-### AI-HR / 人力资源培训生
-- [tencent-ai-hr-communication.md](tencent-ai-hr-communication.md) — 腾讯 · 沟通方向
+> 暂无
 
 ---
 
 ## 维护规则
 
-1. **新增 JD 文件**：必须同时在「按状态」「按公司」「按岗位类型」三处登记。
+1. **新增 JD 文件**：本地同步在「按状态」「按公司」「按岗位类型」三处登记；**不要把含个人信息的改动 push 到公开仓库**。
 2. **状态变更**：从一个 section 移到另一个，不要重复列。
 3. **关闭一份**：移到 Closed，并在文件里补上「复盘」section。
 4. **半年清理一次**：closed 超过 6 个月可以归档到 `jd-bank/archive/`。

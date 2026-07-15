@@ -79,8 +79,9 @@ job-description-skill/
 │   └── offer-strategy-report.md  # 最终 HTML 报告 — 10 节骨架 + 视觉规范 + 生成说明
 ├── examples/                     # 参考骨架（不含个人数据）
 │   └── offer-strategy-template.html
-└── jd-bank/                      # 已分析过的 JD 反查库（本地不进 git）
-    ├── _index.md                 # 索引
+└── jd-bank/                      # 已分析过的 JD 反查库（个人内容本地不进 git）
+    ├── _index.md                 # 仓库空壳索引（勿写个人投递）
+    ├── _index.local.md           # 本地个人索引（gitignore）
     └── _jd-template.md           # 新 JD 起手模板
 ```
 

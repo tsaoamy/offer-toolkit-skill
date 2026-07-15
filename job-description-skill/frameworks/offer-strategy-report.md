@@ -239,7 +239,7 @@
 3. 用 [examples/offer-strategy-template.html](../examples/offer-strategy-template.html) 的 CSS / 结构当骨架，把内容填进去。
 4. 写到 `./output/offer-strategy-<slug>.html`。
 5. **同步更新 jd-bank 文件**：把 §6 / §8 / §9 三个占位符回填 + 在文件最后加一行 `> 📊 HTML 报告：./output/offer-strategy-<slug>.html`。
-6. **同步更新 [jd-bank/_index.md](../jd-bank/_index.md)**：status 改为 `matched` 或更高，加一列 `report` 链接。
+6. **同步更新 [jd-bank/_index.local.md](../jd-bank/_index.local.md)**：status 改为 `matched` 或更高，加一列 `report` 链接。不要把个人信息写进仓库空壳 `_index.md`。
 
 ---
 

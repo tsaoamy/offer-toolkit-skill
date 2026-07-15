@@ -11,7 +11,7 @@
 
 ## Step 0 · 先查库（永远先做）
 
-读 `jd-bank/_index.md`：
+读 `jd-bank/_index.local.md`（没有再读 `_index.md`）：
 
 - **同公司 + 同岗位 + 半年内分析过** → 直接调出之前的分析，告诉用户"上次解码过，结论是 ___，要不要直接用还是重新解？"
 - **同公司不同岗位 / 同岗位不同公司** → 复用其中的 Hidden Signals 推断，但 Must Have / Nice to Have 重做。
@@ -123,7 +123,7 @@ JD 反复出现 "ambiguity" + "ownership" + "drive"
 1. 按 [../jd-bank/_jd-template.md](../jd-bank/_jd-template.md) 创建 `jd-bank/<company>-<role-slug>-<YYYYMM>.md`。
 2. frontmatter 必填：company / role / level / source_url / decoded_at / status: decoded。
 3. 把 5 个图层的产出写进文件正文。
-4. **更新 `jd-bank/_index.md`**，登记这份 JD。
+4. **更新 `jd-bank/_index.local.md`**（无则新建），登记这份 JD。不要改会被提交的 `_index.md` 空壳。
 
 ---
 

@@ -79,8 +79,9 @@ job-description-skill/
 │   └── offer-strategy-report.md  # Final HTML report — sections, visual system, content rules
 ├── examples/                     # Reference skeletons (no personal data)
 │   └── offer-strategy-template.html
-└── jd-bank/                      # Local cache of analyzed JDs (gitignored)
-    ├── _index.md                 # Index
+└── jd-bank/                      # Local JD cache (personal rows stay out of git)
+    ├── _index.md                 # Empty scaffold index (do not put personal entries)
+    ├── _index.local.md           # Local personal index (gitignored)
     └── _jd-template.md           # Starter template for new JDs
 ```
 
