@@ -22,6 +22,7 @@ resume-skill/*.pdf
 
 # === Job Description Skill · personal JD analyses ===
 # Only track template + index inside jd-bank/
+# (Personal JD analyses stay local; add !exceptions if you want to publish a case study)
 job-description-skill/jd-bank/*.md
 !job-description-skill/jd-bank/_index.md
 !job-description-skill/jd-bank/_jd-template.md

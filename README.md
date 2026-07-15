@@ -9,7 +9,7 @@
 **Three job-hunt tools in one agent skill pack — JD · Resume · BQ.**
 
 [![License](https://img.shields.io/badge/LICENSE-MIT-4c8bf5?style=flat-square&labelColor=333)](./LICENSE)
-[![Version](https://img.shields.io/badge/VERSION-1.1.0-2ea44f?style=flat-square&labelColor=333)]()
+[![Version](https://img.shields.io/badge/VERSION-1.2.0-2ea44f?style=flat-square&labelColor=333)]()
 [![Skills](https://img.shields.io/badge/SKILLS-3-2ea44f?style=flat-square&labelColor=333)]()
 [![Stars](https://img.shields.io/github/stars/tsaoamy/offer-toolkit-skill?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/tsaoamy/offer-toolkit-skill/stargazers)
 
@@ -82,4 +82,4 @@ MIT — fork it, remix it, ship your own version.
 
 Maintained by [Rick (@tsaoamy)](https://github.com/tsaoamy)
 
-Adapted from [yanliudesign/offer-toolkit-skill](https://github.com/yanliudesign/offer-toolkit-skill). See [NOTICE.md](./NOTICE.md).
+See [NOTICE.md](./NOTICE.md).

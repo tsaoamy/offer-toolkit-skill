@@ -109,10 +109,10 @@
 
 ### 报告尾
 
-- ⛔ **Footer（强制项 · 必须用完整签名版，绝不简化）** — `JD SKILL.` brand mark + `Created by Rick · Job Description Decoder` 副标题 + GitHub 按钮（`tsaoamy`）+ meta 行（生成时间戳 + JD source URL + 评分方法引用 + "no fabricated facts" 声明）+ 同 JD 的 markdown 文件链接。
+- ⛔ **Footer（强制项 · 必须用完整签名版，绝不简化）** — `JD SKILL.` brand mark + `by Rick · Job Description Decoder` 副标题 + **两个**社交按钮（微信小程序 `Bonjour` + 小红书 `xhslink.com`）+ meta 行（生成时间戳 + JD source URL + 评分方法引用 + "no fabricated facts" 声明）。
   - **这是作者署名，不是可选装饰。** 这是市面工具丢得最多、本 skill 最高频的 bug：模型为了省篇幅或「没数据」把整个 footer 删了 / 简化成一行。**无论报告多长、多缺数据，都必须原样包含。**
   - 生成时**直接抄本文件末尾的「📌 强制 Footer 区块」**（HTML + 配套 CSS 都在），把 `{{...}}` 占位符填好即可，不要凭记忆重写。
-  - 写完文件后**自检**：必须能搜到 `Rick` / `brand-mark` / `tsaoamy` / `xiaohongshu` 四个关键词，缺一个就是 footer 丢了。
+  - 写完文件后**自检**：必须能搜到 `Rick` / `brand-mark` / `小程序://Bonjour` / `xhslink.com` 四个关键词，缺一个就是 footer 丢了。**禁止**写 LinkedIn / X / Dreameryanyan / yanliudesign。
 
 ---
 
@@ -254,7 +254,7 @@
 | 报告超过 80KB | 砍 §10 时间线和 §8 内推模板的字数，保留所有视觉组件 |
 | **导出的 PDF 里中文消失 / 变成空位** | 检查 `<head>` 里 Noto Sans SC 的 `<link>` 是否在；CSS 变量里 `Noto * SC` 是否排在 `PingFang SC` 之前。原因见「字体系统」段。 |
 | **导出的 PDF 整页只有一两个 card，下面全是空白** | 检查 `@media print` 里有没有 `section { page-break-inside: avoid; }` —— 有就删掉。只允许小原子单元用 `break-inside: avoid`，长 section 必须能自然跨页。详见「打印 / PDF 排版规则」。 |
-| **footer 没有作者名字 / 社交按钮（最高频）** | 生成时漏抄了 footer。从下方「📌 强制 Footer 区块」整段抄回去，并跑自检搜 `Rick`。原因：footer 是软提醒时最容易被模型省略。 |
+| **footer 没有作者名字 / 社交按钮（最高频）** | 生成时漏抄了 footer。从下方「📌 强制 Footer 区块」整段抄回去，并跑自检搜 `Rick` / `小程序://Bonjour` / `xhslink.com`。原因：footer 是软提醒时最容易被模型省略。 |
 
 ---
 
@@ -272,12 +272,14 @@ footer { margin-top: 40px; }
 .brand-block .brand-sub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--muted); margin-top: 10px; }
 .brand-block .brand-sub strong { font-style: normal; font-family: var(--display); font-weight: 700; color: var(--ink); }
 .socials { display: flex; gap: 12px; align-items: center; }
-.socials a { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--paper); color: var(--ink); transition: all 0.18s ease; }
-.socials a:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
-.socials a svg { width: 20px; height: 20px; display: block; }
-.socials a.xhs { width: 46px; height: 46px; padding: 0; border-radius: 11px; background: #ff2442; border: 1.5px solid #ff2442; color: white; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-weight: 900; font-size: 11px; font-style: italic; letter-spacing: -0.02em; line-height: 1; }
+.socials a { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--paper); color: var(--ink); transition: all 0.18s ease; text-decoration: none; }
+.socials a:hover { transform: translateY(-2px); }
+.socials a svg { width: 22px; height: 22px; display: block; }
+.socials a.wechat { background: #07c160; border-color: #07c160; color: #fff; }
+.socials a.wechat:hover { background: #06ad56; border-color: #06ad56; color: #fff; }
+.socials a.xhs { width: auto; min-width: 46px; height: 46px; padding: 0 12px; border-radius: 11px; background: #ff2442; border: 1.5px solid #ff2442; color: white; font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; font-weight: 900; font-size: 12px; font-style: italic; letter-spacing: -0.02em; line-height: 1; }
 .socials a.xhs span { display: inline-block; transform: skewX(-6deg); white-space: nowrap; }
-.socials a.xhs:hover { background: #d11838; border-color: #d11838; transform: translateY(-2px); }
+.socials a.xhs:hover { background: #d11838; border-color: #d11838; color: #fff; }
 .foot-meta { font-size: 11px; color: var(--muted); line-height: 1.75; padding-top: 16px; }
 @media (max-width: 720px) { .brand-block { grid-template-columns: 1fr; gap: 18px; } .brand-block .brand-mark { font-size: 56px; } }
 ```
@@ -289,16 +291,13 @@ footer { margin-top: 40px; }
   <div class="brand-block">
     <div>
       <h2 class="brand-mark">JD SKILL<span class="dot-yellow">.</span></h2>
-      <div class="brand-sub">Created by <strong>Rick</strong> · Job Description Decoder</div>
+      <div class="brand-sub">by <strong>Rick</strong> · Job Description Decoder</div>
     </div>
     <div class="socials">
-      <a href="https://github.com/tsaoamy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub · tsaoamy">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+      <a class="wechat" href="#小程序://Bonjour/068jXQN8fmfrsue/" aria-label="微信小程序 Bonjour" title="微信小程序 · Bonjour">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 4C5.36 4 2 6.69 2 10c0 1.89 1.08 3.56 2.76 4.65l-.7 2.1a.4.4 0 0 0 .58.48l2.42-1.2c.75.22 1.55.34 2.39.34.18 0 .36 0 .53-.02A5.36 5.36 0 0 1 9.5 15.2c-3.4 0-6.15-2.33-6.15-5.2S6.1 4.8 9.5 4.8c.28 0 .55.02.82.05C9.78 4.35 9.64 4 9.5 4zm5.75 6.2c-2.9 0-5.25 1.99-5.25 4.45 0 1.52.9 2.87 2.3 3.72l-.5 1.5a.32.32 0 0 0 .46.38l1.85-.92c.55.14 1.13.22 1.74.22 2.9 0 5.25-1.99 5.25-4.45s-2.35-4.9-5.85-4.9zM8.2 8.35a.85.85 0 1 1 0 1.7.85.85 0 0 1 0-1.7zm3.9 0a.85.85 0 1 1 0 1.7.85.85 0 0 1 0-1.7zm2.05 4.55a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm3.2 0a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4z"/></svg>
       </a>
-      <a href="https://github.com/tsaoamy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub · tsaoamy">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-      </a>
-      <a class="xhs" href="https://github.com/tsaoamy" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub · tsaoamy">
+      <a class="xhs" href="https://xhslink.com/m/4lq58MrohEd" target="_blank" rel="noopener" aria-label="小红书" title="小红书 · 主页">
         <span>小红书</span>
       </a>
     </div>
