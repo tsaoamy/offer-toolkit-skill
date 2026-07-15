@@ -1,0 +1,115 @@
+<div align="center">
+
+**中文** · [English](./README.md)
+
+# 📄 Resume Skill
+
+---
+
+**一份简历数据，十一套打印级模板。**
+
+[![License](https://img.shields.io/badge/LICENSE-MIT-4c8bf5?style=flat-square&labelColor=333)](./LICENSE)
+[![Version](https://img.shields.io/badge/VERSION-1.0.0-2ea44f?style=flat-square&labelColor=333)]()
+[![Templates](https://img.shields.io/badge/TEMPLATES-11-2ea44f?style=flat-square&labelColor=333)]()
+[![Stars](https://img.shields.io/github/stars/tsaoamy/offer-toolkit-skill/tree/main/resume-skill?style=flat-square&label=STARS&color=e37f2c&labelColor=333)](https://github.com/tsaoamy/offer-toolkit-skill/tree/main/resume-skill/stargazers)
+
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-d97757?style=flat-square&labelColor=1a1a1a&logo=anthropic&logoColor=white)](https://claude.ai/code)
+[![Codex](https://img.shields.io/badge/Codex-Skill-2ea44f?style=flat-square&labelColor=1a1a1a)]()
+[![OpenCode](https://img.shields.io/badge/OpenCode-Skill-4c8bf5?style=flat-square&labelColor=1a1a1a)]()
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-Skill-8b5cf6?style=flat-square&labelColor=1a1a1a)]()
+[![Hermes](https://img.shields.io/badge/Hermes-Skill-e879a8?style=flat-square&labelColor=1a1a1a)]()
+
+</div>
+
+> 📦 属于 **[offer-toolkit-skill](https://github.com/tsaoamy/offer-toolkit-skill)** 求职工具包 — 装工具包等于一次性拿到 JD · Resume · BQ 三条子 skill。
+
+一个 agent skill：帮你把现有简历改好看、从 LinkedIn 导入、或者聊着聊着帮你从零写一份。所有素材先汇入一份标准结构化数据，再套模板渲染成 13 套打印级模板之一——换模板只是换皮，内容不丢。
+
+![一份数据 schema 渲染出的十一套打印优化模板](docs/preview.png)
+
+---
+
+## 三条入口
+
+| 用户说的话 | 流程 | 脚本 |
+|---|---|---|
+| "帮我美化简历" / 上传了 PDF/docx/txt | **美化已有简历** | [`prompts/beautify.md`](prompts/beautify.md) |
+| "这是我的 LinkedIn" / 贴 linkedin.com 链接 | **LinkedIn 导入** | [`prompts/linkedin-import.md`](prompts/linkedin-import.md) |
+| "帮我从零做一份" / "咱们聊一聊" | **对话式建简历** | [`prompts/interview.md`](prompts/interview.md) |
+
+三条入口最终都把数据汇入 [`schema/resume-data.md`](schema/resume-data.md),再套模板渲染。
+
+## 13 套模板
+
+| 预览 | 模板 | 适合 |
+|:---:|---|---|
+| <img src="docs/templates/classic-ats.png" width="300"> | **Classic / ATS**<br>[`classic-ats.html`](templates/classic-ats.html) | 单栏无花哨,机器可解析,大公司海投最稳 |
+| <img src="docs/templates/ledger.png" width="300"> | **Ledger 学术工程**<br>[`ledger.html`](templates/ledger.html) | LaTeX 风衬线,两端对齐,嵌套子弹,软件/数据/工程岗 |
+| <img src="docs/templates/tech-compact.png" width="300"> | **Tech 紧凑**<br>[`tech-compact.html`](templates/tech-compact.html) | 高信息密度+等宽点缀,多项目塞一页 |
+| <img src="docs/templates/modern-sidebar.png" width="300"> | **Modern 侧栏**<br>[`modern-sidebar.html`](templates/modern-sidebar.html) | 双栏+深色侧边栏,现代感强 |
+| <img src="docs/templates/pillar.png" width="300"> | **Pillar 信息卡**<br>[`pillar.html`](templates/pillar.html) | Enhancv 风,蓝点缀+技能胶囊+图标成就,产品/市场/PM |
+| <img src="docs/templates/elegant-serif.png" width="300"> | **Elegant 衬线**<br>[`elegant-serif.html`](templates/elegant-serif.html) | 衬线居中编辑风,设计/咨询/市场 |
+| <img src="docs/templates/atelier.png" width="300"> | **Atelier 极简**<br>[`atelier.html`](templates/atelier.html) | 大量留白+细字大写名+竖线分栏,设计/创意/审美岗 |
+| <img src="docs/templates/timeline.png" width="300"> | **Timeline 时间轴**<br>[`timeline.html`](templates/timeline.html) | 左侧竖向时间轴脊柱,一眼看出职业成长轨迹 |
+| <img src="docs/templates/swiss.png" width="300"> | **Swiss 栅格**<br>[`swiss.html`](templates/swiss.html) | 瑞士栅格,粗体 Helvetica + 红点缀,设计/品牌/创意 |
+| <img src="docs/templates/executive.png" width="300"> | **Executive 高管**<br>[`executive.html`](templates/executive.html) | 藏青衬线,稳重有分量,金融/咨询/高管/资深领导 |
+| <img src="docs/templates/editorial-banner.png" width="300"> | **Editorial 刊物**<br>[`editorial-banner.html`](templates/editorial-banner.html) | 三栏刊物式顶部 + 红衬线 + 底部已名巨型色带 —— 品牌/内容/编辑 |
+| <img src="docs/templates/photo-corporate.png" width="300"> | **Photo Corporate 公司头像**<br>[`photo-corporate.html`](templates/photo-corporate.html) | 深色 banner + 圆形头像，侧栏带技能进度条 + 竖向时间轴 + References —— 营销/项目/商务 |
+| <img src="docs/templates/photo-minimal.png" width="300"> | **Photo Minimal 红点约头像**<br>[`photo-minimal.html`](templates/photo-minimal.html) | 红点缀 + 分体衬线名字 + 圆形头像，侧栏 Awards + Skills —— 设计/创作/portfolio |
+
+**选模板提示**:海投/过机器筛 → Classic/ATS 或 Ledger;人直接看/内推/作品集向 → 其余几套更出彩。
+
+## 三条第一原则
+
+1. **绝不杜撰。** 所有经历、职责、数字必须来自用户真实提供的内容。可以引导、追问、把弱 bullet 改强,但绝不编造公司、职位、成果或量化数字。任何数字都向用户求证,不确定就标 `[待确认]`。
+2. **一次只问一个问题。** 对话式建简历是访谈不是问卷。
+3. **先结构化,再渲染。** 不管入口是哪条,都先把内容整理成 `schema/resume-data.md` 定义的字段,确认无误后才套模板出 HTML。
+
+## 可编辑版 — 浏览器里点字就能改
+
+每次渲染自动输出**两个文件**:
+
+| 文件 | 用途 |
+|---|---|
+| `<姓名>-resume-<模板>.html` | 锁定成品, `Cmd+P` 直接出 PDF |
+| `<姓名>-resume-<模板>-editable.html` | 浏览器里点任何字就能改,改完 `Cmd+P` 出 PDF |
+
+可编辑版在任意模板上叠加 3 件东西(详见 [`prompts/editable-version.md`](prompts/editable-version.md)),完全不动模板视觉设计:
+
+- 在内容容器上加 `contenteditable="true"`
+- hover / focus 视觉提示(黄底虚线 → 蓝框)
+- 右上角浮动工具条:**Save as PDF** + **Lock** 两个按钮
+- `@media print` 把工具条和编辑高亮自动隐藏,PDF 输出干净
+
+⚠️ 浏览器里的修改只活在当前窗口,刷新会丢。改完一定要 `Cmd+P` 存成 PDF 才算落地。
+
+## 用法
+
+把整个 `resume-skill/` 目录放到 skills 文件夹(如 `~/.claude/skills/resume-skill/`),然后直接说"帮我美化这份简历"(附 PDF)、"我没有简历,咱们聊聊帮我做一份"、"这是我的 LinkedIn,帮我建一份"。Claude 读 `SKILL.md` 走对应流程。
+
+**输出**:两份自包含的单文件 HTML — `<姓名>-resume-<模板>.html`(锁定)和 `<姓名>-resume-<模板>-editable.html`(点字即改)。任一份浏览器打开 → `Cmd+P` → 另存为 PDF(边距 None/Default、**勾选背景图形**)。
+
+## 目录结构
+```
+resume-skill/
+├── SKILL.md                       # 流程总入口(必读)
+├── schema/resume-data.md          # 标准结构化字段(所有入口的中转格式)
+├── prompts/
+│   ├── beautify.md                # 入口 A:美化已有简历
+│   ├── linkedin-import.md         # 入口 B:LinkedIn 导入与降级方案
+│   ├── interview.md               # 入口 C:对话式采集脚本
+│   └── editable-version.md        # 把任何渲染成品升级为点击即改页面的注入片段
+├── guides/writing-tips.md         # bullet 写法、量化、ATS 关键词、常见错误
+└── templates/                     # 13 套打印优化 HTML 模板
+```
+
+## 配套 skill
+- [offer-toolkit-skill](https://github.com/tsaoamy/offer-toolkit-skill) — 三件套（JD · Resume · BQ）
+- [job-description-skill](https://github.com/tsaoamy/offer-toolkit-skill/tree/main/job-description-skill) — JD 解码 + Offer 策略
+- [Behavior-question-skill](https://github.com/tsaoamy/offer-toolkit-skill/tree/main/bq-skill) — 行为面试 / 职业故事库
+
+## License
+
+MIT 协议 — 随便 fork、改造、发一个你自己的版本。
+
+Maintained by [Rick (@tsaoamy)](https://github.com/tsaoamy)
